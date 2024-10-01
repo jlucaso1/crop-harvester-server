@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "cropharvestserver",
+	"version": "${version}",
+	"name": "CropHarvestServer",
+	"description": "A fabric mod that allows you to harvest crops",
+	"authors": [
+		"jlucaso"
+	],
+	"contact": {
+		"homepage": "https://github.com/jlucaso1/crop-harvester-server",
+		"sources": "https://github.com/jlucaso1/crop-harvester-server"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/cropharvestserver/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.jlucaso.cropharvestserver.CropHarvestServer"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
