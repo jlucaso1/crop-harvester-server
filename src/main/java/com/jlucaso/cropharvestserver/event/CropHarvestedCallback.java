@@ -16,4 +16,6 @@ public interface CropHarvestedCallback {
       });
 
   void onCropHarvested(PlayerEntity player, ServerWorld world, BlockPos pos, BlockState state);
+
+  public static final String EVENT_KEY = "cropharvestserver:crop_harvested";
 }

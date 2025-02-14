@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
+import net.fabricmc.loader.api.FabricLoader;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,7 @@ public class CropHarvestServer implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		FabricLoader.getInstance().getObjectShare().put(CropHarvestedCallback.EVENT_KEY, CropHarvestedCallback.EVENT);
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
