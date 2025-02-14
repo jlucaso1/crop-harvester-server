@@ -13,6 +13,8 @@ import net.minecraft.util.math.BlockPos;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.jlucaso.cropharvestserver.event.CropHarvestedCallback;
+
 public class CropHarvestServer implements ModInitializer {
 	public static final String MOD_ID = "cropharvestserver";
 
@@ -44,6 +46,8 @@ public class CropHarvestServer implements ModInitializer {
 
 					// Replant the crop
 					world.setBlockState(pos, crop.getDefaultState());
+
+					CropHarvestedCallback.EVENT.invoker().onCropHarvested(player, (ServerWorld) world, pos, state);
 
 					return ActionResult.SUCCESS;
 				}
